@@ -9,6 +9,7 @@ namespace APi.Data
             : base(options) { }
 
         public DbSet<OfficeInfo> OfficeInfos { get; set; }
-        public DbSet<User> Users { get; set; } 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 }
