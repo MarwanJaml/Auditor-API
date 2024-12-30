@@ -66,7 +66,7 @@ namespace Api.Controllers
             office.ExpectedBudgets = updatedOffice.ExpectedBudgets;
 
             await _dbContext.SaveChangesAsync();
-            return NoContent();
+            return Ok(new { message = "Office info updated successful" });
         }
 
         // DELETE: api/OfficeInfo/{id}
@@ -79,7 +79,7 @@ namespace Api.Controllers
 
             _dbContext.OfficeInfos.Remove(office);
             await _dbContext.SaveChangesAsync();
-            return NoContent();
+            return Ok(new { message = "Office info deleted successful" });
         }
     }
 }
